@@ -85,31 +85,6 @@
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-// //
-// let var1 = prompt('Enter number 1', 23456789);
-//
-// var1 = parseInt(var1);
-//
-// console.log(var1);
-
-// let var2 = prompt('Enter number 2', 'ENTER ME');
-//
-// const RESULT = (var1 * var1) + 2 * var1 *var2 + (var2 * var2);
-//
-//
-// alert('RESULT IS ' + RESULT);
-// console.log(RESULT);
 
 
 let x = 789; // 987
@@ -117,7 +92,6 @@ let x = 789; // 987
 let n1 = x % 100;
 n1 = parseInt(n1 / 10);
 
-let n2 = x % 10;
 
 let n3 = parseInt(x / 100);
 
