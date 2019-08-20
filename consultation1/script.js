@@ -172,14 +172,50 @@ let db = new DataBase('Nastya', 12345);
 
 db.getInstance();
 db.getInstance();
-db.getInstance();
-db.getInstance();
-db.getInstance();
 
 
 
 
+let arr = [
+    {name: 'Vaktor', id: 9},
+    {name: 'Ibessa', id: 2},
+    {name: 'Ncstya', id: 3},
+    {name: 'Sdrgey', id: 7}
+];
+
+let sortedArray = arr.sort((a, b) => {
+    let secondLiterA = a.name[1];
+    let secondLiterB = b.name[1];
+
+    if (secondLiterA > secondLiterB) {
+        return -1;
+    }
+    if (secondLiterB > secondLiterA) {
+        return 1
+    }
+    return 0;
+});
+
+// console.log(arr);
+console.log(sortedArray);
+console.log('_____________________');
+
+
+arr.forEach((el, i) => {
+    if (i > 1) {
+        return
+    }
+    console.log(el);
+});
+
+
+let obj = {name: 'Viktor', age: 23};
 
 
 
+function asyHello() {
+    console.log(this.name + ' HELLO')
+}
 
+
+asyHello.call(obj)
