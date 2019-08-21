@@ -14,72 +14,73 @@
 // - заповнити його 50 непарними числами за допомоги циклу
 
 
-let arr = [2,17,13,6,22,31,45,66,100,-18];
-
-let i = 0;
-
-while (i < arr.length) {
-
-    if (i % 2 !== 0) {
-        console.log(arr[i]);
-    }
-    i++
-}
-
-console.log('__________');
-
-for (let j = 0; j < arr.length; j++) {
-
-    if (j % 2 === 1) {
-        console.log(arr[j]);
-    }
-
-}
-
-console.log('__________');
-
-const length = arr.length;
-
-for (let k = 0; k < length; k++) {
-    const el = arr[k];
-    console.log(el);
-    if (el % 2 === 0) {
-        console.log(el);
-    }
-}
-
-
-console.log('__________');
-
-
-for (let j = 0; j < length; j++) {
-    let el = arr[j];
-
-    if (el % 3 === 0) {
-        arr[j] = 'okten'
-    }
-}
-
-
-
-console.log('__________');
-
-//[2,17,13,31,22,31,45,66,100,-18]
-
-console.log(arr.length);
-for (let j = arr.length-1; j >= 0; j--) {
-    console.log(arr[j]);
-}
-
+// let arr = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
+//
+// let i = 0;
+//
+// while (i < arr.length) {
+//     if (i % 2 !== 0) {
+//         console.log(arr[i]);
+//     }
+//     i++;
+// }
+//
+// console.log('-____________________-');
+//
+//
+// const length = arr.length;
+//
+// for (let j = 0; j < length; j++) {
+//     const el = arr[j];
+//
+//     if (j % 2 !== 0) {
+//         console.log(el);
+//     }
+// }
+//
+//
+// i = 0;
+// console.log('__________');
+//
+//
+// while (i < arr.length) {
+//     if (arr[i] % 2 === 0) {
+//         console.log(arr[i]);
+//     }
+//     i++
+// }
+//
+//
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 3 === 0) {
+//         arr[i] = 'okten'
+//     }
+// }
+//
+// console.log(arr);
+//
+//
+// console.log('__________');
+//
+//
 
 let arr2 = [];
 
+console.time('qwe');
+
 while (arr2.length < 50) {
-    let randomNumber = parseInt(Math.random()*999)
+    let randomNumber = Math.floor(Math.random() * 999);
+    console.log(randomNumber);
+
     if (randomNumber % 2 === 0) {
-        arr2.push(randomNumber);
+        arr2.push(3)
     }
 }
 
-console.log(arr2);
-console.log(arr2.length);
+console.timeEnd('qwe');
+
+// console.log(arr2);
+// console.log(arr2.length);
+
+
+
