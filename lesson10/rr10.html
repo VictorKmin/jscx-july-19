@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    fetch('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5')
+        .then(value => value.json())
+        .then(jsonedValue => {
+            jsonedValue.forEach(kusr => {
+                document.write(`${kusr.ccy} to ${kusr.base_ccy} is: BUY ${kusr.buy} - SALE ${kusr.sale} <p>`)
+            })
+        })
+
+
+
+    navigator.geolocation.getCurrentPosition(success);
+
+    function success(pos) {
+        let crd = pos.coords;
+        console.log('__________');
+        console.log(crd);
+        console.log('__________');
+
+        console.log('Your current position is:');
+        console.log(`Latitude : ${crd.latitude}`);
+        console.log(`Longitude: ${crd.longitude}`);
+        console.log(`More or less ${crd.accuracy} meters.`);
+    }
+
+
+</script>
+
+</body>
+</html>
