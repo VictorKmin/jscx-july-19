@@ -148,52 +148,57 @@ console.log('__________');
 //
 // console.log(secondTask);
 //
-// if (secondTask >= 0 && secondTask <= 15) {
-//     console.log('1');
-// } else if (secondTask >= 16 && secondTask <= 30) {
-//     console.log('2');
-// } else if (secondTask >= 31 && secondTask <= 45) {
-//     console.log('3');
-// } else if (secondTask >= 46 && secondTask <= 59) {
-//     console.log('4');
-// } else {
-//     console.log('BAD');
-// }
+if (secondTask >= 0 && secondTask <= 15) {
 
-// let zz = 1;
-// let bzz = 2;
-//
-// console.time('IF')
-// if (zz <= 1 && bzz >= 3) {
-//     console.log(zz + bzz)
-// } else {
-//     console.log(zz - bzz)
-// }
-// console.timeEnd('IF')
-//
-// console.time('ELSE');
-// zz <= 1 && bzz >= 3 ? console.log(zz + bzz) : console.log(zz - bzz)
-//
-// console.timeEnd('ELSE')
+    console.log('1');
+} else if (secondTask >= 16 && secondTask <= 30) {
 
-// //
-// let month = Math.random() * (12 - 1) + 1;
+    console.log('2');
+} else if (secondTask >= 31 && secondTask <= 45) {
+
+    console.log('3');
+} else if (secondTask >= 46 && secondTask <= 59) {
+
+    console.log('4');
+} else {
+
+    console.log('BAD');
+}
+
+let zz = 1;
+let bzz = 2;
+
+console.time('IF')
+if (zz <= 1 && bzz >= 3) {
+    console.log(zz + bzz)
+} else {
+    console.log(zz - bzz)
+}
+console.timeEnd('IF')
+
+console.time('ELSE');
+zz <= 1 && bzz >= 3 ? console.log(zz + bzz) : console.log(zz - bzz)
+
+console.timeEnd('ELSE')
+
 //
-// console.log(month);
-// month = month.toFixed(2)
-// console.log(month);
-//
-// if (month >= 1 && month <= 2 || month === 12) {
-//     console.log('Winter')
-// } else if (month >= 3 && month <= 5) {
-//     console.log('Spring')
-// } else if (month >= 6 && month <= 8) {
-//     console.log('Summer')
-// } else if (month >= 9 && month <= 11) {
-//     console.log('Fall')
-// } else {
-//     console.log('ANOTHER PLANET')
-// }
+let month = Math.random() * (12 - 1) + 1;
+
+console.log(month);
+month = month.toFixed(2)
+console.log(month);
+
+if (month >= 1 && month <= 2 || month === 12) {
+    console.log('Winter')
+} else if (month >= 3 && month <= 5) {
+    console.log('Spring')
+} else if (month >= 6 && month <= 8) {
+    console.log('Summer')
+} else if (month >= 9 && month <= 11) {
+    console.log('Fall')
+} else {
+    console.log('ANOTHER PLANET')
+}
 
 // let season = parseInt(Math.random() * (4 - 1) + 1);
 // let result = '';

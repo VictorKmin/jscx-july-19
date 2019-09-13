@@ -18,6 +18,7 @@ let obj = {
     },
     projects: ['Spin']
 };
+console.log(obj.profession.company);
 //
 // console.log(obj.projects[1]);
 //
@@ -80,11 +81,11 @@ let users = [
 ];
 
 //
-for (let i = 0; i < arr.length; i++) {
+for (let i = 0; i < users.length; i++) {
 
-    if (arr[i] < 15) {
+    if (users[i].age < 15) {
         console.log('BINGO');
-        console.log(arr[i]);
+        console.log(users[i]);
         console.log('__________');
     }
 }
