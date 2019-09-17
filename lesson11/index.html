@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button id="btn">CLICK</button>
+
+<input type="text" id="inpt" value="HELLO">
+
+<div id="divka" class="divkaClass"></div>
+
+
+<div style="width: 100px; height: 50px; background-color: crimson"></div>
+
+
+<ul>
+    <li class="lishka">1</li>
+    <li class="lishka">2</li>
+    <li class="lishka">3</li>
+</ul>
+
+<form id="forms">
+    <input type="text" name="myName">
+    <input type="password" name="myPass">
+</form>
+
+
+<script>
+    // TODO localStorage
+    // TODO preventDefault
+    // TODO cool events
+    // TODO test
+    // TODO addEventListener
+    // TODO forms API
+
+
+    // let divka = document.getElementById('divka');
+    //
+    // // console.log(divka.innerHTML);
+    //
+    // // let randomPx = Math.random()*500
+    // //
+    // // divka.style.width = `${randomPx}px`;
+    //
+    //
+    // let byLishkaName = document.getElementsByClassName('lishka');
+    //
+    // // Array.from(byLishkaName).map(lis => {
+    // //     console.log(lis);
+    // // })
+    // // byLishkaName.map(lish => {
+    // //     console.log(lish);
+    // // });
+    // // byLishkaName[0].innerText = 'TEST';
+    // //
+    // // for (let i = 0; i < byLishkaName.length; i++) {
+    // //     const red = Math.random()*255
+    // //     const green = Math.random()*255
+    // //     const blue = Math.random()*255
+    // //     console.log(byLishkaName[i].style.backgroundColor = `rgb(${red} ${green} ${blue})`);
+    // // }
+    //
+    // let elementsByTagName = document.getElementsByTagName('div');
+    //
+    // // // elementsByTagName[0].classList.add('someClass');
+    // // // console.log(elementsByTagName[0].classList);
+    // // // elementsByTagName[0].classList.remove('divkaClass');
+    // //
+    // // // elementsByTagName[0].classList.toggle('hidden');
+    // // elementsByTagName[0].classList.toggle('hidden');
+    // //
+    // // console.log(elementsByTagName[0].classList);
+    //
+    //
+    // console.log(elementsByTagName[0].classList);
+    // elementsByTagName[0].classList.toggle('someClass')
+    // console.log(elementsByTagName[0].classList);
+    // elementsByTagName[0].classList.toggle('someClass')
+    // console.log(elementsByTagName[0].classList);
+    //
+    //
+    //
+    //
+    //
+    // // elementsByTagName[0].classList.add('someClass');
+    // // console.log(elementsByTagName[0].classList);
+    // // elementsByTagName[0].classList.remove('divkaClass');
+    // // console.log(elementsByTagName[0].classList);
+
+
+    let btn = document.getElementById('btn');
+    let inpt = document.getElementById('inpt');
+    let [someLi] = document.getElementsByClassName('lishka');
+
+    let divka = document.getElementById('divka');
+    //
+    // //
+    // // divka.onclick = ()=> {
+    // //     console.log('CLIVK');
+    // // }
+    // // let i = 0;
+    // // btn.onclick = () => {
+    // //     console.log(i);
+    // //     i++
+    // // }
+    //
+    //
+    // btn.onclick = () => {
+    //     let inptValue = inpt.value;
+    //     someLi.innerText = inptValue
+    // }
+    //
+    // divka.onmousemove = (ev) => {
+    //     let posY = ev.clientY;
+    //     let posX = ev.clientX;
+    //
+    //     console.log(posX, posY);
+    //
+    //     ev.target.style.backgroundColor = `rgb(${posY} ${posX} ${(posY + posX) / 2})`
+    // }
+    //
+    // divka.onmouseleave = () => {
+    //     console.log('MOUSER LEAVE');
+    // }
+    //
+    // divka.onmouseover = () => {
+    //     console.log('MOUSER OVER');
+    // }
+
+    inpt.oncopy = () => false;
+
+    inpt.oninput = () => {
+        let inptValue = inpt.value;
+        someLi.innerText = inptValue
+    }
+
+
+</script>
+
+
+<style>
+    .divkaClass {
+        width: 200px;
+        height: 200px;
+        background-color: chocolate
+    }
+
+    .someClass {
+        background-color: darkkhaki;
+        width: 58px;
+        height: 85px;
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
+
+</body>
+</html>
