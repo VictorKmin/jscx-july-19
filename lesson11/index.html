@@ -6,137 +6,204 @@
 </head>
 <body>
 
-<button id="btn">CLICK</button>
+<!--<button id="btn">CLICK</button>-->
 
-<input type="text" id="inpt" value="HELLO">
+<!--<input type="text" id="inpt" value="HELLO">-->
 
-<div id="divka" class="divkaClass"></div>
-
-
-<div style="width: 100px; height: 50px; background-color: crimson"></div>
+<!--<div id="divka" class="divkaClass"></div>-->
 
 
-<ul>
-    <li class="lishka">1</li>
-    <li class="lishka">2</li>
-    <li class="lishka">3</li>
-</ul>
+<!--<div style="width: 100px; height: 50px; background-color: crimson"></div>-->
 
-<form id="forms">
-    <input type="text" name="myName">
-    <input type="password" name="myPass">
+
+<!--<ul>-->
+<!--<li class="lishka">1</li>-->
+<!--<li class="lishka">2</li>-->
+<!--<li class="lishka">3</li>-->
+<!--</ul>-->
+
+<!--<form id="forms">-->
+<!--<input type="text" name="myName">-->
+<!--<input type="password" name="myPass">-->
+<!--</form>-->
+
+
+<div id="red">
+    <div id="green">
+        <div id="blue">
+
+        </div>
+    </div>
+</div>
+
+
+<form id="goodForm" name="formName">
+    <input type="text" name="email" value="email@ela.com">
+    <input type="text" name="pass" value="1111">
+    <input type="submit" name="ok" value='CLICK'>
+
+    <!--<button id="ok">OK</button>-->
 </form>
 
-
 <script>
-    // TODO localStorage
-    // TODO preventDefault
+    // TODO preventDefault stopPropagation +
+    // TODO localStorage +
     // TODO cool events
-    // TODO test
-    // TODO addEventListener
-    // TODO forms API
+    // TODO addEventListener +
+    // TODO forms API +
 
-
-    // let divka = document.getElementById('divka');
     //
-    // // console.log(divka.innerHTML);
-    //
-    // // let randomPx = Math.random()*500
+    // // let divka = document.getElementById('divka');
     // //
-    // // divka.style.width = `${randomPx}px`;
-    //
-    //
-    // let byLishkaName = document.getElementsByClassName('lishka');
-    //
-    // // Array.from(byLishkaName).map(lis => {
-    // //     console.log(lis);
-    // // })
-    // // byLishkaName.map(lish => {
-    // //     console.log(lish);
-    // // });
-    // // byLishkaName[0].innerText = 'TEST';
+    // // // console.log(divka.innerHTML);
     // //
-    // // for (let i = 0; i < byLishkaName.length; i++) {
-    // //     const red = Math.random()*255
-    // //     const green = Math.random()*255
-    // //     const blue = Math.random()*255
-    // //     console.log(byLishkaName[i].style.backgroundColor = `rgb(${red} ${green} ${blue})`);
-    // // }
-    //
-    // let elementsByTagName = document.getElementsByTagName('div');
-    //
+    // // // let randomPx = Math.random()*500
+    // // //
+    // // // divka.style.width = `${randomPx}px`;
+    // //
+    // //
+    // // let byLishkaName = document.getElementsByClassName('lishka');
+    // //
+    // // // Array.from(byLishkaName).map(lis => {
+    // // //     console.log(lis);
+    // // // })
+    // // // byLishkaName.map(lish => {
+    // // //     console.log(lish);
+    // // // });
+    // // // byLishkaName[0].innerText = 'TEST';
+    // // //
+    // // // for (let i = 0; i < byLishkaName.length; i++) {
+    // // //     const red = Math.random()*255
+    // // //     const green = Math.random()*255
+    // // //     const blue = Math.random()*255
+    // // //     console.log(byLishkaName[i].style.backgroundColor = `rgb(${red} ${green} ${blue})`);
+    // // // }
+    // //
+    // // let elementsByTagName = document.getElementsByTagName('div');
+    // //
+    // // // // elementsByTagName[0].classList.add('someClass');
+    // // // // console.log(elementsByTagName[0].classList);
+    // // // // elementsByTagName[0].classList.remove('divkaClass');
+    // // //
+    // // // // elementsByTagName[0].classList.toggle('hidden');
+    // // // elementsByTagName[0].classList.toggle('hidden');
+    // // //
+    // // // console.log(elementsByTagName[0].classList);
+    // //
+    // //
+    // // console.log(elementsByTagName[0].classList);
+    // // elementsByTagName[0].classList.toggle('someClass')
+    // // console.log(elementsByTagName[0].classList);
+    // // elementsByTagName[0].classList.toggle('someClass')
+    // // console.log(elementsByTagName[0].classList);
+    // //
+    // //
+    // //
+    // //
+    // //
     // // // elementsByTagName[0].classList.add('someClass');
     // // // console.log(elementsByTagName[0].classList);
     // // // elementsByTagName[0].classList.remove('divkaClass');
+    // // // console.log(elementsByTagName[0].classList);
+    //
+    //
+    // let btn = document.getElementById('btn');
+    // let inpt = document.getElementById('inpt');
+    // let [someLi] = document.getElementsByClassName('lishka');
+    //
+    // let divka = document.getElementById('divka');
     // //
-    // // // elementsByTagName[0].classList.toggle('hidden');
-    // // elementsByTagName[0].classList.toggle('hidden');
+    // // //
+    // // // divka.onclick = ()=> {
+    // // //     console.log('CLIVK');
+    // // // }
+    // // // let i = 0;
+    // // // btn.onclick = () => {
+    // // //     console.log(i);
+    // // //     i++
+    // // // }
     // //
-    // // console.log(elementsByTagName[0].classList);
-    //
-    //
-    // console.log(elementsByTagName[0].classList);
-    // elementsByTagName[0].classList.toggle('someClass')
-    // console.log(elementsByTagName[0].classList);
-    // elementsByTagName[0].classList.toggle('someClass')
-    // console.log(elementsByTagName[0].classList);
-    //
-    //
-    //
-    //
-    //
-    // // elementsByTagName[0].classList.add('someClass');
-    // // console.log(elementsByTagName[0].classList);
-    // // elementsByTagName[0].classList.remove('divkaClass');
-    // // console.log(elementsByTagName[0].classList);
-
-
-    let btn = document.getElementById('btn');
-    let inpt = document.getElementById('inpt');
-    let [someLi] = document.getElementsByClassName('lishka');
-
-    let divka = document.getElementById('divka');
-    //
     // //
-    // // divka.onclick = ()=> {
-    // //     console.log('CLIVK');
-    // // }
-    // // let i = 0;
     // // btn.onclick = () => {
-    // //     console.log(i);
-    // //     i++
+    // //     let inptValue = inpt.value;
+    // //     someLi.innerText = inptValue
+    // // }
+    // //
+    // // divka.onmousemove = (ev) => {
+    // //     let posY = ev.clientY;
+    // //     let posX = ev.clientX;
+    // //
+    // //     console.log(posX, posY);
+    // //
+    // //     ev.target.style.backgroundColor = `rgb(${posY} ${posX} ${(posY + posX) / 2})`
+    // // }
+    // //
+    // // divka.onmouseleave = () => {
+    // //     console.log('MOUSER LEAVE');
+    // // }
+    // //
+    // // divka.onmouseover = () => {
+    // //     console.log('MOUSER OVER');
     // // }
     //
+    // inpt.oncopy = () => false;
     //
-    // btn.onclick = () => {
+    // inpt.oninput = () => {
     //     let inptValue = inpt.value;
     //     someLi.innerText = inptValue
     // }
-    //
-    // divka.onmousemove = (ev) => {
-    //     let posY = ev.clientY;
-    //     let posX = ev.clientX;
-    //
-    //     console.log(posX, posY);
-    //
-    //     ev.target.style.backgroundColor = `rgb(${posY} ${posX} ${(posY + posX) / 2})`
+
+    let red = document.getElementById('red')
+    let green = document.getElementById('green')
+    let blue = document.getElementById('blue')
+
+    // redDiv.onclick = () => {
+    //     console.log('red');
     // }
-    //
-    // divka.onmouseleave = () => {
-    //     console.log('MOUSER LEAVE');
+    // green.onclick = () => {
+    //     console.log('green');
     // }
-    //
-    // divka.onmouseover = () => {
-    //     console.log('MOUSER OVER');
+    // blue.onclick = () => {
+    //     console.log('blue');
     // }
 
-    inpt.oncopy = () => false;
+    // red.addEventListener('click', ev => {
+    //     console.log('red');
+    // });
+    //
+    // green.addEventListener('click', ev => {
+    //     console.log('green');
+    // });
+    //
+    // blue.addEventListener('click', ev => {
+    //     console.log('blue');
+    //     ev.stopPropagation();
+    // });
 
-    inpt.oninput = () => {
-        let inptValue = inpt.value;
-        someLi.innerText = inptValue
+    let formName = document.forms.goodForm;
+
+    let email = formName.email;
+    let pass = formName.pass;
+    let ok = formName.ok;
+    // let ok = document.getElementById('ok');
+
+
+    ok.onclick = function (ev) {
+        ev.preventDefault();
+        console.log(email.value);
+        console.log(pass.value);
     }
 
+
+    localStorage.setItem('U', JSON.stringify(['Mikila', 'Oksana', 'Nastua', 'Vova', 'Roman']));
+
+    let item = localStorage.getItem('U');
+
+    console.log(JSON.parse(item));
+
+    localStorage.removeItem('Me')
+
+    localStorage.clear();
 
 </script>
 
@@ -156,6 +223,24 @@
 
     .hidden {
         display: none;
+    }
+
+    #red {
+        width: 200px;
+        height: 200px;
+        background-color: darkred;
+    }
+
+    #green {
+        width: 100px;
+        height: 100px;
+        background-color: darkgreen;
+    }
+
+    #blue {
+        width: 50px;
+        height: 50px;
+        background-color: darkblue;
     }
 </style>
 
