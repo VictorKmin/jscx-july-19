@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button id="left"> LEFT</button>
+<div><img src="36957183.png" alt=""></div>
+<div><img src='53579961.jpeg' alt=""></div>
+<div><img src="52854896.jpeg" alt=""></div>
+<button id="right"> RIGHT</button>
+
+
+<!--<input type="range" id="range" value="200" max="400" min="100">-->
+
+<script>
+
+    //    let divToChange = document.getElementById('divToChange');
+    //    let range = document.getElementById('range');
+    //
+    //    range.oninput = () => {
+    //        const value = range.value;
+    //
+    //        divToChange.style.width = value + 'px';
+    //        divToChange.style.height = value + 'px';
+    //    }
+
+    let divku = document.getElementsByTagName('div');
+    let left = document.getElementById('left');
+    let right = document.getElementById('right');
+
+    let showedDiv = 0;
+
+    divku[showedDiv].style.display = 'inline-block';
+
+    left.onclick = () => {
+        // showedDiv = showedDiv < 0 ? divku.length - 1 : showedDiv;
+        divku[showedDiv].style.display = 'none';
+
+        showedDiv--;
+
+        if (showedDiv < 0) {
+            showedDiv = divku.length - 1;
+        }
+
+        divku[showedDiv].style.display = 'inline-block';
+
+        clearInterval(int);
+    }
+
+    right.onclick = ev => {
+        // showedDiv = showedDiv === divku.length - 1 ? showedDiv = 0 : showedDiv;
+
+        divku[showedDiv].style.display = 'none';
+
+        showedDiv++;
+
+        if (showedDiv > divku.length - 1) {
+            showedDiv = 0
+        }
+
+        divku[showedDiv].style.display = 'inline-block';
+
+        console.log(ev);
+
+        clearInterval(int);
+    }
+
+let int = setInterval(()=> {
+            divku[showedDiv].style.display = 'none';
+
+            showedDiv++;
+
+            if (showedDiv > divku.length - 1) {
+                showedDiv = 0
+            }
+
+            divku[showedDiv].style.display = 'inline-block'
+        }, 1000);
+
+</script>
+
+<style>
+
+    div {
+        display: none;
+    }
+
+</style>
+</body>
+</html>
