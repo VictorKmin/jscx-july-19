@@ -9,35 +9,32 @@ app.use(express.urlencoded({extended: true}));
 
 app.use(express.static(path.join(__dirname, 'static')));
 
-const users = [];
-
 app.engine('.hbs', expHbs({
-    extname: '.hbs'
+    extname: '.hbs',
+    defaultLayout: null
 }));
 
 app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'static'));
 
+let { user } = require('./controllers');
+let { user: userMiddleware } = require('./middleware');
+let { provider } = require('./dataBase');
+
 app.get('/login', (req, res) => {
-    res.render('main', { title: 'HELLO WORLD', group: 'jscx-july-19'})
+    res.render('login', {title: 'HELLO WORLD', group: 'jscx-july-19'})
 });
 
-app.post('/register', (req, res) => {
-    let body = req.body;
-    users.push(body);
-    res.render('login')
-});
+app.post('/users', userMiddleware.checkUserValidityMiddleware, user.createUser);
+app.get('/users/:user_id', userMiddleware.isUserPresentMiddleware, user.getById);
+app.get('/users', user.findAll);
 
-app.get('/users/:user_id', (req,res)=> {
-    console.log(req.params);
-    console.log(req.query);
-    res.end(JSON.stringify(req.params))
-});
+app.all('*', async (req, res) => {
 
-app.all('*', (req, res)=> {
-    res.status(505).json('NOT FOUND? SORRY')
-});
+    let [query] = await provider.promise().query('SELECT * FROM user');
 
+    res.json(query)
+});
 
 app.listen(3000, () => {
     console.log('HELLO');
