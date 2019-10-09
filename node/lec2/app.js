@@ -3,6 +3,8 @@ const expHbs = require('express-handlebars');
 const path = require('path');
 
 const app = express();
+const db = require('./dataBase').getInstance();
+db.setModels();
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
@@ -17,23 +19,22 @@ app.engine('.hbs', expHbs({
 app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'static'));
 
-let { user } = require('./controllers');
-let { user: userMiddleware } = require('./middleware');
-let { provider } = require('./dataBase');
+let {userRouter, houseRouter} = require('./router');
 
 app.get('/login', (req, res) => {
     res.render('login', {title: 'HELLO WORLD', group: 'jscx-july-19'})
 });
 
-app.post('/users', userMiddleware.checkUserValidityMiddleware, user.createUser);
-app.get('/users/:user_id', userMiddleware.isUserPresentMiddleware, user.getById);
-app.get('/users', user.findAll);
+app.use('/users', userRouter);
+app.use('/houses', houseRouter);
 
 app.all('*', async (req, res) => {
+    const {resolve} = require('path');
 
-    let [query] = await provider.promise().query('SELECT * FROM user');
+    console.log(resolve(`./dataBase/models/TEST`));
+    // let [query] = await provider.promise().query('SELECT * FROM user');
 
-    res.json(query)
+    res.json("ok")
 });
 
 app.listen(3000, () => {
