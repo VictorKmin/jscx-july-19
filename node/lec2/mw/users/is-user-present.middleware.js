@@ -5,7 +5,7 @@ module.exports = async (req, res, next) => {
         const { user_id } = req.params;
         const UserModel = dataBase.getModel('User');
 
-        let isUserPresent = await UserModel.findOne({
+        const isUserPresent = await UserModel.findOne({
             where: {
                 id: user_id
             },

@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const {user: userMiddleware} = require('../../middleware');
+const {user: userMiddleware} = require('../../mw');
 const {user} = require('../../controllers');
 
 router.post('/', user.createUser);
