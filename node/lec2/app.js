@@ -29,14 +29,14 @@ app.use('/users', userRouter);
 app.use('/houses', houseRouter);
 
 app.all('*', async (req, res) => {
-    const {resolve} = require('path');
 
-    console.log(resolve(`./dataBase/models/TEST`));
-    // let [query] = await provider.promise().query('SELECT * FROM user');
+    let obj = {}
 
-    res.json("ok")
+    const email = obj && obj.person && obj.person.name;
+
+    res.json(email)
 });
 
 app.listen(3000, () => {
-    console.log('HELLO');
+    console.log('3000');
 });

@@ -1,22 +1,17 @@
-const dataBase = require('../../dataBase').getInstance();
+const {userService} = require('../../service');
 
 module.exports = async (req, res, next) => {
     try {
         const { user_id } = req.params;
-        const UserModel = dataBase.getModel('User');
 
-        const isUserPresent = await UserModel.findOne({
-            where: {
-                id: user_id
-            },
-            attributes: ['name', 'email']
-        });
+        const isUserPresent = await userService.getById(user_id);
+
+        console.log(isUserPresent.email);
 
         if (!isUserPresent) {
             throw new Error(`User with ID ${user_id} is not present`)
         }
 
-        console.log(isUserPresent.dataValues);
 
         req.user = isUserPresent;
 
