@@ -19,7 +19,7 @@ app.engine('.hbs', expHbs({
 app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'static'));
 
-let {userRouter, houseRouter} = require('./router');
+let {userRouter, houseRouter, authRouter} = require('./router');
 
 app.get('/login', (req, res) => {
     res.render('login', {title: 'HELLO WORLD', group: 'jscx-july-19'})
@@ -27,6 +27,7 @@ app.get('/login', (req, res) => {
 
 app.use('/users', userRouter);
 app.use('/houses', houseRouter);
+app.use('/auth', authRouter);
 
 app.all('*', async (req, res) => {
 
