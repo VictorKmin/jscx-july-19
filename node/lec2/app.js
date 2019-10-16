@@ -1,11 +1,16 @@
 const express = require('express');
 const expHbs = require('express-handlebars');
 const path = require('path');
+const morgan = require('morgan');
+const fileUpload = require('express-fileupload');
 
 const app = express();
 const db = require('./dataBase').getInstance();
 db.setModels();
+global.appRoot = __dirname;
 
+app.use(morgan('dev'));
+app.use(fileUpload());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 

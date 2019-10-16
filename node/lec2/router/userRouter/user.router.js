@@ -10,3 +10,6 @@ router.get('/', user.findAll);
 router.put('/:user_id', checkAccessTokenMiddleware, user.updateUser);
 
 module.exports = router;
+
+
+// https://stackoverflow.com/questions/48854066/missing-credentials-for-plain-nodemailer/58419037#58419037

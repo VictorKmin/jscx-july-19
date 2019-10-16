@@ -11,15 +11,24 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "express-fileupload": "^1.1.6-alpha.5",
     "express-handlebars": "^3.1.0",
-    "mysql2": "^1.7.0",
     "jsonwebtoken": "^8.5.1",
-    "sequelize": "^5.19.5"
+    "morgan": "^1.9.1",
+    "mysql2": "^1.7.0",
+    "nodemailer": "^6.3.1",
+    "sequelize": "^5.19.5",
+    "uuid": "latest",
+    "fs-extra": "^8.1.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.1",
     "@types/sequelize": "^4.28.5",
     "@types/express-handlebars": "^0.0.33",
-    "@types/jsonwebtoken": "^8.3.4"
+    "@types/jsonwebtoken": "^8.3.4",
+    "@types/morgan": "^1.7.37",
+    "@types/nodemailer": "^6.2.1",
+    "@types/express-fileupload": "^1.1.0",
+    "@types/fs-extra": "^8.0.1"
   }
 }
