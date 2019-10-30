@@ -1,26 +1,32 @@
-const fs = require('fs');
-//
-// for (let i = 0; i < 1000000; i++) {
-//     fs.appendFile('./text.txt', 'TEXT ', ()=> {
-//     });
-// }
+let express = require('express');
+let app = express();
 
+app.use(express.json());
+app.use(express.urlencoded());
 
-// console.log(info);
-//
-// fs.readFile('./text.txt', (err, data) => {
-//     console.log(data);
-// });
+app.get('/:car_id', (req, res) => {
 
-// let readStream = fs.createReadStream('../../../../Videos/soc10');
-//
-// readStream.on('data', data => {
-//     console.log(data);
-// });
+    console.log(req.params);
 
-fs.rename('./someFile.txt', '../someDir/newFile.txt', ()=> {
-    console.log("success");
+    res.json('Auto ' + req.params.car_id)
+});
+
+app.get('/myurl', (req, res) => {
+    res.write('another url');
+
+    res.end()
+});
+
+app.post('/', (req, res) => {
+    // console.log(req.body);
+
+    res.end('edn')
 })
 
-
-
+app.listen(3000, (err) => {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log(3000)
+    }
+})

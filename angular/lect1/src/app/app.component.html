@@ -1,0 +1,52 @@
+<button (click)="mousseClick()">
+  CLICK ME
+</button>
+
+<br>
+
+<input type="text" (input)="onInput($event)">
+
+<br>
+
+{{inputedValue}}
+
+<br>
+<br>
+
+<!--IF ELSE-->
+
+<button (click)="changeStatus()">CHANGE STS</button>
+
+<div *ngIf="status">
+  TRUE
+</div>
+
+<div *ngIf="!status">
+  FALSE
+</div>
+
+
+<!--SWITCH CASE-->
+
+<button (click)="incremI()">
+  I++
+</button>
+
+<div [ngSwitch]="numb">
+  <h1 *ngSwitchCase="1"> FIRST {{numb}} </h1>
+  <h1 *ngSwitchCase="2"> SECOND {{numb}}</h1>
+  <h1 *ngSwitchCase="3">TRI {{numb}}</h1>
+  <h1 *ngSwitchDefault> DEFAULT {{numb}} </h1>
+</div>
+
+
+<!--ITAR-->
+
+
+<div *ngFor="let user of users" style="border: 2px solid green; padding: 20px">
+  Name: {{user.name}}
+  <br>
+  Car: {{user.car}}
+  <br>
+  <br>
+</div>

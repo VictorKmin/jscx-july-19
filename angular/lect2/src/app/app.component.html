@@ -1,0 +1,188 @@
+<!--Styles.-->
+<!--Basci style.-->
+<!--Classes-->
+<!--Change color ????-->
+<!--[textContent]-->
+<!--FORM-->
+<!--References form-->
+<!--Two way binding-->
+<!--From validation -> valid toched etc.-->
+<!--Pipes.-->
+
+<h2 [style.backgroundColor]="error ? 'indianred' : 'green'"> SOME TEXT </h2>
+
+<div
+  [ngClass]="error ? 'bg-red' : 'bg-green'"
+  [textContent]="error ? 'ERRRRRROOOOEEE' : 'ALL FINE'"
+>
+  DIVKA
+</div>
+
+
+<div
+  [ngClass]="['bg-red', error ? 'color-yellow' : 'color-notYellow']"
+>
+  ng Class array
+</div>
+
+<br>
+<br>
+<div [ngStyle]="errorStyle">
+  ng style TS
+</div>
+
+
+<button (click)="createErr()">DO ERROR</button>
+
+
+<br>
+<br>
+
+FORMS
+
+REFERENCE FORM
+
+<form #jobReferenceForm="ngForm" (ngSubmit)="applyForRef(jobReferenceForm)">
+  NAME: <input type="text" name="name" ngModel>
+  <br>
+  <input type="radio" name="gender" value="male" ngModel> male
+  <input type="radio" name="gender" value="female" ngModel> female
+  <br>
+  <input type="checkbox" name="js" value="JS" ngModel>
+  <input type="checkbox" name="java" value="JAVA" ngModel>
+  <input type="checkbox" name="php" value="PeHaPe" ngModel>
+  <br>
+  <select name="position" ngModel>
+    <option value="Junior">Junior</option>
+    <option value="Middle">Middle</option>
+    <option value="Senior">Senior</option>
+  </select>
+
+  <button> GO GO GO</button>
+</form>
+
+<p></p>
+<br>
+<br>
+TWO WAYS DATA BINDING
+<form>
+  NAME:<input type="text" name="name" [(ngModel)]="employee.name">
+  <br>
+  <input type="radio" name="gender" value="male"
+         [(ngModel)]="employee.gender"
+  > male
+  <input type="radio" name="gender" value="female"
+         [(ngModel)]="employee.gender"
+  > female
+  <br>
+  <input type="checkbox" name="js" value="JS"
+         [(ngModel)]="employee.js"
+  >
+  <input type="checkbox" name="java" value="JAVA" [(ngModel)]="employee.java">
+  <input type="checkbox" name="php" value="PeHaPe" [(ngModel)]="employee.php">
+  <br>
+  <select name="position" [(ngModel)]="employee.position">
+    <option value="Junior">Junior</option>
+    <option value="Middle">Middle</option>
+    <option value="Senior">Senior</option>
+  </select>
+
+  <button> GO GO GO</button>
+</form>
+
+<button (click)="autoFill()"></button>
+
+<br>
+<br>
+<br>
+<br>
+FORM VALIDATION
+
+<form (ngSubmit)="applyForDataBind(twoWayForm)" #twoWayForm="ngForm">
+
+  <label
+    [ngStyle]="{color: nameInput.invalid && nameInput.touched ? 'red' : 'black'}"
+  >
+    NAME:
+  </label>
+
+  <input
+    type="text" name="name"
+    [(ngModel)]="employee.name"
+    #nameInput="ngModel"
+    required
+    minlength="3"
+  >
+
+  <label
+    [ngStyle]="{color: emailInput.invalid && emailInput.touched ? 'red' : 'black'}"
+  >
+    EMAIL:
+  </label>
+  <input
+    type="text" name="email"
+    [(ngModel)]="employee.name"
+    #emailInput="ngModel"
+    email
+    required
+  >
+
+  <button [disabled]="!twoWayForm.valid"></button>
+</form>
+
+
+<br>
+<br>
+<br>
+<br>
+
+{{pipeString}}
+<br>
+{{pipeString | lowercase}}
+<br>
+{{pipeString | uppercase}}
+<br>
+{{pipeString | slice:3: 10}}
+<br>
+<br>
+{{pipeNumber}}
+<br>
+{{pipeNumber | number: '3.2-5'}}
+<br>
+{{pipeNumber | number: '1.0-0'}}
+<br>
+<br>
+{{pipePercent}}
+<br>
+{{pipePercent | percent}}
+<br>
+<br>
+{{pipeDate}}
+<br>
+{{pipeDate | date: 'fullDate'}}
+<br>
+{{pipeDate | date: 'shortDate'}}
+<br>
+{{pipeDate | date: 'fullTime'}}
+<br>
+{{pipeDate | date: 'shortTime'}}
+<br>
+{{pipeDate | date: 'short'}}
+<br>
+{{pipeDate | date: 'yyyy/MM/dd hh:mm:ss'}}
+
+
+<!--
+'short': equivalent to 'M/d/yy, h:mm a' (6/15/15, 9:03 AM).
+'medium': equivalent to 'MMM d, y, h:mm:ss a' (Jun 15, 2015, 9:03:01 AM).
+'long': equivalent to 'MMMM d, y, h:mm:ss a z' (June 15, 2015 at 9:03:01 AM GMT+1).
+'full': equivalent to 'EEEE, MMMM d, y, h:mm:ss a zzzz' (Monday, June 15, 2015 at 9:03:01 AM GMT+01:00).
+'shortDate': equivalent to 'M/d/yy' (6/15/15).
+'mediumDate': equivalent to 'MMM d, y' (Jun 15, 2015).
+'longDate': equivalent to 'MMMM d, y' (June 15, 2015).
+'fullDate': equivalent to 'EEEE, MMMM d, y' (Monday, June 15, 2015).
+'shortTime': equivalent to 'h:mm a' (9:03 AM).
+'mediumTime': equivalent to 'h:mm:ss a' (9:03:01 AM).
+'longTime': equivalent to 'h:mm:ss a z' (9:03:01 AM GMT+1).
+'fullTime': equivalent to 'h:mm:ss a zzzz' (9:03:01 AM GMT+01:00).
+-->
