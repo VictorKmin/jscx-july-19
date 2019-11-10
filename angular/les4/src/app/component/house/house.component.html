@@ -1,0 +1,6 @@
+<div *ngFor="let p of posts">
+  {{p | json}}
+  <br>
+  <button (click)="getFullInfo(p.id)"> GET FULL INFO</button>
+  <hr>
+</div>

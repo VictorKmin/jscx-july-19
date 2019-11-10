@@ -108,27 +108,64 @@
 // lC(10, 5, (action) => {
 //     return action
 // })
+//
+//
+// let arrToSort = [1, 2, 3, 6, 9, 0, 5, 44, 545, 3];
+//
+// function sorter(arr, cb) {
+//     cb('+')
+// }
+//
+// sorter(arrToSort, function (action) {
+//     if (action === '+') {
+//         arrToSort = arrToSort.sort((a, b) => a - b)
+//     }
+//
+//     if (action === '-') {
+//         arrToSort = arrToSort.sort((a, b) => b - a)
+//     }
+//
+//     console.log(arrToSort);
+// })
+//
+//
+// let arr = [1, {name: "Vasya", car: "true"}, null, 3, [5, [2, [2,5,5,['HELOO', 'CHATIK'],3,5]], -1, 87], 9];
+//
+// console.log(arr.flat(3));
 
 
-let arrToSort = [1, 2, 3, 6, 9, 0, 5, 44, 545, 3];
 
-function sorter(arr, cb) {
-    cb('+')
+//
+// function counter() {
+//     let a = 0;
+//
+//     return {
+//         increment: () => {
+//             a++;
+//             console.log(a);
+//         }
+//     }
+// }
+//
+// let x = counter();
+//
+// counter().
+//
+// x.increment();
+// x.increment();
+// x.increment();
+// x.increment()
+
+
+
+
+function createError() {
+    throw new Error('SOME ERROR')
 }
 
-sorter(arrToSort, function (action) {
-    if (action === '+') {
-        arrToSort = arrToSort.sort((a, b) => a - b)
-    }
 
-    if (action === '-') {
-        arrToSort = arrToSort.sort((a, b) => b - a)
-    }
-
-    console.log(arrToSort);
-})
-
-
-let arr = [1, {name: "Vasya", car: "true"}, null, 3, [5, [2, [2,5,5,['HELOO', 'CHATIK'],3,5]], -1, 87], 9];
-
-console.log(arr.flat(3));
+try {
+    createError();
+} catch (e) {
+    console.log(e.message);
+}
