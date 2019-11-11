@@ -1,0 +1,18 @@
+<form (ngSubmit)="authUser()">
+id:
+  <input
+    type="text" name="id"
+    [(ngModel)]="user.user_id"
+    required
+  >
+  <button> GET USER</button>
+</form>
+
+
+<br>
+
+<button (click)="getUserFromSubject()"> GET USER FROM SUBJECT</button>
+
+<br>
+
+<button (click)="sendToken2()"> SEND TOKEN TO BE</button>

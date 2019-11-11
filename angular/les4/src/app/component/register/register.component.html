@@ -1,0 +1,32 @@
+<form (ngSubmit)="creteUser()">
+
+  <label>
+    NAME:
+  </label>
+
+  <input
+    type="text" name="name"
+    [(ngModel)]="user.name"
+    required
+    minlength="3"
+  >
+
+  <br>
+  <label>
+    EMAIL:
+  </label>
+  <input
+    type="text" name="email"
+    [(ngModel)]="user.email"
+    email
+    required
+  >
+
+  <br>
+  PASSWORD
+  <input type="text" name="password"
+         [(ngModel)]="user.password"
+  >
+
+  <button> CREATE USER</button>
+</form>

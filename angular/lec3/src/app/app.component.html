@@ -1,0 +1,21 @@
+{{2 | powNumber: 5}}
+
+
+<h1 appHowerizer>
+  HELLO CHATIK
+</h1>
+
+<h1 appHowerizer="blue">
+  HELLO BOYS
+</h1>
+
+<h1 appHowerizer="pink">
+  HELLO GIRLS
+</h1>
+
+
+<app-house-component
+  *ngFor="let house of houses"
+  [house] = "house"
+  (deleteHouse)="clickHere($event)"
+></app-house-component>

@@ -1,3 +1,3 @@
 export const configs = {
-  HOST: 'http://localhost:3000/'
+  HOST: 'http://localhost:3000/api'
 };

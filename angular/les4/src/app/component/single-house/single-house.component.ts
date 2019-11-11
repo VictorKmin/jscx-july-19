@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
-import {HouseService} from '../../services/house.service';
+import {UserService} from '../../services/user.service';
 
 @Component({
   selector: 'app-single-house',
@@ -12,7 +12,7 @@ export class SingleHouseComponent implements OnInit {
 
   constructor(
     private activatedRouter: ActivatedRoute,
-    private houseService: HouseService
+    private houseService: UserService
   ) {
   }
 
