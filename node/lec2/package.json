@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "express-fileupload": "^1.1.6-alpha.5",
+    "express-fileupload": "^1.1.9",
     "express-handlebars": "^3.1.0",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.9.1",
